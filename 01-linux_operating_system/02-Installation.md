@@ -127,5 +127,82 @@ Recommended for servers, as it does not make major changes to software installat
 
 ## Configuring Software Repositories
 
+- Ubuntu uses software repositories to get information about available software that can be installed
+- Ubuntu Universe Repository
+  - Debian packages are made available in Ubuntu's Universe repository
+  - *Masters of the Universe (MOTUs)*
+  - Enabled by default
+- Software Updates GUI tool
+
 ![](./imgs/02/09.png)
+
+![](./imgs/02/10.png)
+
+The more boxes you check, the wider your selection of software. It is a good idea to make sure that the Properiety Devices box is checkedd so that you can benefit from drivers that might enhance system performance.
+
+Backports: software that is released for a newer version of Ubuntu but reprogrammed to be compatible with the current release.
+
+![](./imgs/02/11.png)
+
+Some Ubuntu releases are called LTS, for long-term support, and are intended for production use by most people. The interim releases are for those who feel they must have the most recent version of everything or those who help work on Ubuntu development. These releases are stable, but they are supported for only a short time, so if you choose to use them, you should plan to upgrade to the new release every six months. By ensuring that the release upgrade option is set to LTS releases only, you’ll be prompted to upgrade your version of Ubuntu only every two years; the next LTS version, 20.04, is scheduled to be released in April 2020.
+
+## System Settings
+
+![](./imgs/02/12.png)
+
+## Detecting and Configuring a Printer
+
+<http://www.openprinting.org/printers>
+
+## Configuring Power Management
+
+## Setting the Time and Date
+
+### Using the `date` Command
+
+`$ date`
+
+To adjust system's date to September 28, 2018 at 10:33 a.m.
+`$ sudo date 092810332018`
+
+### Using the `hwclock` Command
+
+Use the `hwclock` command to display or set Lunix system time, display or set PC's hardware clock, or synchronize the system and hardware times.
+
+`$ sudo hwclock --show`
+`$ sudo hwclock --set --date "09/28/18 10:33:00"
+`$ sudo hwclock --show`
+
+To set the system time from PC’s hardware clock, use the `--hctosys` option
+`$ sudo hwclock --hctosys`
+
+To set hardware clock using the system time, use the `--systohc` option
+`$ sudo hwclock --systohc`
+
+## Configuring Wireless Networks
+
+- SSID: Service Set Identifier
+- Hidden Networks
+- Cisco VPN `vpnc`
+
+## Troubleshooting Post-Installation Configuration Problems
+
+Ubuntu built-in error log: errors that don't affect the appearance of the sytem
+
+`$ dmesg`
+
+Commonly used with `grep` to filter out output. `dmesg` takes its output from `/var/log/messages`.
+
+`$ less /var/log/messages`
+
+`$ dmesg > dmesg.txt`
+
+`$ less dmesg.txt`
+
+Making backups is important. Do not use `bak` extension because this might get overwritten by another application.
+
+`$ cp dmesg.txt dmesg_bk.txt`
+
+Suggestion: backupYYYYMMDD
+
 
