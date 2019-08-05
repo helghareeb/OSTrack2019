@@ -156,3 +156,71 @@ file creator’s main group, but you can change this designation by using the ch
 command.
 - **File size and creation/modification date** — The last two elements indicate the size of the file in bytes and the date the file was created or last modified.
 
+### Assigning Permissions
+
+Under Linux, permissions are grouped by owner, group, and others, with read, write, and execute permission assigned to each as follows
+
+| Owner | Group | Others |
+|-------|-------|--------|
+| rwx | rwx | rwx |
+
+- r
+- w 
+- x
+
+- 4
+- 2
+- 1
+
+In Linux, you can create groups to assign a number of users access to common directo-
+ries and files, based on permissions. You might assign everyone in accounting to a group
+named accounting and allow that group access to accounts payable files while disallow-
+ing access by other departments. Defined groups are maintained by the root operator, but
+you can use the newgrp command to temporarily join other groups to access files (as long
+as the root operator has added you to the other groups). You can also allow or deny other
+groups’ access to your files by modifying the group permissions of your files.
+
+### Directory Permissions
+
+- Directories are also files under Linux
+
+`$ mkdir directory`
+`$ ls -ld directory`
+
+`$ man ls`
+
+`ls` command with `ld` option is used to show the permissions and other information about the directory (not its contents)
+
+- r: read the directory
+- w: write to the directory
+- x: execute the content
+
+`$ ls -l /dev/ttyS0` # Linux Serial Port
+
+`$ ls -l /dev/sda`
+
+### Altering File Permissions with `chmod`
+
+`chmod`
+
+- **u** — Adds or removes user (owner) read, write, or execute permission
+- **g** — Adds or removes group read, write, or execute permission
+- **o** — Adds or removes read, write, or execute permission for others not in a file’s group
+- **a** —Adds or removes read, write, or execute permission for all users
+- **r** — Adds or removes read permission
+- **w** — Adds or removes write permission
+- **x** — Adds or removes execution permission
+
+`$ touch readme.txt`
+
+`$ chmod a-w readme.txt`
+
+`$ ls -l readme.txt`
+
+`$ chmod 600 readme.txt`
+
+`$ ls -l readmentxt`
+
+### File Permissions with `umask`
+### File Permissions with `chgrp`
+### File Permissions with `chown`
