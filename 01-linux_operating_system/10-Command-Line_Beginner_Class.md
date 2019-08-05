@@ -87,3 +87,24 @@ To find a command and its documentation
 - Not perfect, but logical
 - Mostly consistent
 
+| Directory | Description |
+|-----------|-------------|
+| / | The root directory |
+| /bin | Essential Commands |
+| /boot | Boot loader files, Linux kernel |
+| /dev | Device files |
+| /etc | System configuration files |
+| /home | User home directories |
+| /lib | Shared libraries, kernel modules |
+| /lost+found | Recovered files (if found after system check) |
+| /media | Mount point for removable media, such as DVDs and floppy disks |
+| /mnt | Usual mount point for local, remote file systems, file systems that are additional to the standard, such as a DVD-ROM or another HDD |
+| /opt | Add-on software packages |
+| /proc | Kernel information, process control |
+| /root | Super user (root) home |
+| /sbin | System commands (mostly root only) |
+| /srv | Information relating to services that run on the system |
+| /sys | Real-time information on devices used by the kernel |
+| /tmp | Temporary files |
+| /usr | Software not essential for system operation, such as applications
+
