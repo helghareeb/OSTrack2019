@@ -108,3 +108,51 @@ To find a command and its documentation
 | /tmp | Temporary files |
 | /usr | Software not essential for system operation, such as applications
 
+`$ man hier`
+
+## Navigating the Linux File System
+
+`$ ls`
+
+`$ -a`
+
+`$ ls -al`
+
+![](./imgs/10/01.png)
+
+`$ ls -R`
+
+`$ ls -laR > listing.txt`
+
+`$ cd Desktop`
+
+`$ cd ..`
+
+`$ cd $HOME`
+
+`$ echo $HOME`
+
+`$ cd ~`
+
+`$ pwd`
+
+## Working with Permissions
+
+`$ touch file`
+
+`$ ls -l file`
+
+`ls` command reports on the file:
+
+- **The type of file created** — Common indicators of the type of file are in the leading letter in the output. A blank (which is represented by a dash, as in the preceding example) designates a plain file, d designates a directory, c designates a character
+device (such as /dev/ttyS0 ), and b is used for a block device (such as /dev/sda ).
+- **Permissions** — Read, write, and execute permissions may be assigned for the owner, group, and all others on the system.
+- **Number of links to the file** — The number 1 designates that there is only one file, and any other number indicates that there might be one or more hard-linked files. Links are created with the ln command. A hard-linked file is an exact copy of the
+file, but it might be located elsewhere on the system. Symbolic links of directories can also be created, but only the root operator can create a hard link of a directory.
+- **The owner** — This is the account that owns the file; it is originally the file creator,
+but you can change this designation by using the chown command.
+- **The group** — This is the group of users allowed to access the file; it is originally the
+file creator’s main group, but you can change this designation by using the chgrp
+command.
+- **File size and creation/modification date** — The last two elements indicate the size of the file in bytes and the date the file was created or last modified.
+
