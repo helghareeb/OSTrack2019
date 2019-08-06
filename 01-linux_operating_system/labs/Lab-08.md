@@ -1,42 +1,31 @@
 # بسم الله الرحمن الرحيم
 
-## Link Types
+## Lab Requirements
 
-- **Hard Link** low-level links which the system uses to create elements of the file system itself, such as files and directories.
-- **Symbolic Link** is a file in its own right, but it does not contain a copy of the target file's data. It is similar to a shortcut in Microsoft Windows.
+`p1` file present in the same directory of this file
 
-Most users do not want to create or modify hard links themselves, but symbolic links are a useful tool for any Linux user. A symbolic link is a special file that points to another file or directory, which is called the target. Once created, a symbolic link can be treated as if it is the target file, even if it is has a different name and is located in another directory. Multiple symbolic links can even be created to the same target file, allowing the target to be accessed by multiple names.
+## Lab Steps
 
-## Symbolic Links
+- Go to Desktop
+- Make a New Folder
+- CD into the Folder
+- Copy the Python File there
+- Make another Copy of the Python File
+- Rename the new file as p2
+- In the p2 file
+  - Find the word `p1_out`
+  - Make it `p2_out`
+- Make both p1 and p2 executable
+- Now, in the terminal
+  - run `p1` as a foreground process `./p1`
+  - **Question 1** Can you use the terminal?
+  - Press CTRL + C
+  - run `./p1 &`
+  - **Question 2** What is the meaning of the output given?
+  - Now, run `./p2`
+  - To display the list of background processes, run the command `jobs`
+- To kill the background processes
+  - bring the process to the foreground using the command `fg %` followed by the number of the process in the jobs list
+  - Press `CTRL + C` to terminate the process
+- Terminate all the running jobs using the same procedure
 
-`$ ln -s target linkname`
-
-`$ ln -s myfile mylink`
-
-`$ ls -l`
-
-"total 4" refers to how many blocks on the disk are used by the files listed, not the total number of files
-
-`$ rm myfile`
-
-`$ ls -l`
-
-`$ cat mylink`
-
-Tip: Try editing the file and the link using any text editor
-
-## Hard Links
-
-`$ ln target linkname`
-
-`$ ln -s myfile mylink`
-
-`$ ls -l`
-
-`$ rm myfile`
-
-`$ ls -l`
-
-`$ cat mylink`
-
-Tip: Try editing the file and the link using any text editor

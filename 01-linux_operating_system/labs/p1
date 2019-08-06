@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+
+f = open('fout','w')
+x = 0
+while True:
+  # print('X = {} \n'.format(x))
+  x += 1
+  f.write(str(x))
+  f.write('\n')
+

@@ -1,73 +1,91 @@
 # بسم الله الرحمن الرحيم
 
-## Part 01
+## Processes
 
-In this part, you will learn about the powers of the `root` user.
+- A process refers to a program in execution
+- It’s a running instance of a program
+- It is made up of
+  - the program instruction
+  - data read from files
+  - other programs or input from a system user
 
-Answer the following Questions
+## Types of Processes
 
-- Can `root` user change a file that he does not have permissions over?
-- What are some actions that can be performed by `root` on such a file?
+There are fundamentally two types of processes in Linux:
 
-Let's try
-Using your Ubuntu, try the following commands. In a blank white paper, write the output of the commands. Do not forget to Open a new terminal
+- Foreground
+- Background
 
-`$ cd Desktop`
+### Foreground processes
 
-`$ mkdir ITI`
+- also referred to as interactive processes
+- These are initialized and controlled through a terminal session
+- In other words, there has to be a user connected to the system to start such processes; they haven’t started automatically as part of the system functions/services
 
-`$ cd ITI`
+### Background processes
 
-`$ touch newfile`
+- also referred to as non-interactive/automatic processes
+- are processes not connected to a terminal; they don’t expect any user input
 
-`$ sudo chmod a-rwx newfile` 
+### What is Daemons
 
-Question 1: Write the command to list the `newfile` access permissions, and write them to your answer paper.
+These are special types of background processes that start at system startup and keep running forever as a service; they don’t die. They are started as system tasks (run as services), spontaneously. However, they can be controlled by a user via the init process.
 
-`$ vim newfile`
+` # pidof systemd`
 
-Question 2: Do you notice a mssage at the bottom of the screen? What do you understand from this message?
+`# pidof top`
 
-Now, try to add some text to the file, and save it. 
+`# pidof httpd`
 
-Question 3: What is the message you get at this point?
+To find the process ID and parent process ID of the current shell, run:
 
-Question 4: What is the special character you had to use to save the contents you have added to the file?
+`$ echo $$`
 
-Exit the file and back to the terminal
+`$ echo $PPID`
 
-Now, try taking a look on the file contents (as a regular user - without `sudo`)
+### Linux Background Jobs
 
-`$ cat newfile`
+`# cloudcmd &`
 
-Question 5: What is the output of this step?
+`# jobs`
 
-Now, try one more time with `sudo`
+You can also send a process to the background by suspending it using [Ctrl + Z], this will send the SIGSTOP signal to the process, thus stopping its operations; it becomes idle:
 
-`$ sudo cat newfile`
+`# tar -cf backup.tar /backups/*  #press Ctrl+Z`
+`# jobs`
 
-Question 6: Is there any difference?
+To continue running the above-suspended command in the background, use the bg command:
 
-Now, try deleting the file (without `sudo`)
+`# bg`
 
-Question 7: What is the command to do the previous step?
+To send a background process to the foreground, use the fg command together with the job ID like so:
 
-Question 8: What is the result of the previous command?
+`# jobs`
 
-Now, try deleting the file (with `sudo`)
+`# fg %1`
 
-Question 9: What is the command to do the previous step?
+## How to View Active Processes in Linux
 
-Question 10: What is the result of the previous command?
+There are several Linux tools for viewing/listing running processes on the system, the two traditional and well known are ps and top commands:
 
-Now, switch the terminal loggedin user account to `root`
+### `ps` Command
 
-Question 11: What is the command to do so?
+It displays information about a selection of the active processes on the system as shown below:
 
-Question 12: Now, try editing the `newfile`. Note: if the file does not exist, recreate it and remove all access permissions as done before. Do you notice the same message as before?
+`# ps`
 
-Question 13: exit the file, and try displaying its contents in the terminal. Can you do so?
+`# ps -e | head `
 
-Question 14: try deleting the file. Can you do so?
+### System Monitoring Tool `top` Command
 
-Question 15: what does this indicate to you?
+`# top`
+
+### `kill`
+
+## More Details
+
+<https://www.tecmint.com/linux-process-management/>
+
+
+
+
