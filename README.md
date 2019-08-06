@@ -216,3 +216,7 @@ Web Development (Open Source) - 354 Hours
 ## Finally
 
 Your contribution and collaboration in building this repository is important.
+
+## Note
+
+To download a single folder from Github, we can use <https://minhaskamal.github.io/DownGit/#/home>.
