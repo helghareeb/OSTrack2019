@@ -211,7 +211,7 @@ To lock a user out of his or her account, use the following command
 
 This prepends an ! (exclamation point, also called a bang) to the user’s encrypted password; the command to reverse the process uses the -u option.
 
-### Addint New Users
+### Adding New Users
 
 `$ sudo useradd ahmed -p c00kieZ4ME -u 1042`
 
