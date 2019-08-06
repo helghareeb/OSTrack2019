@@ -11,14 +11,7 @@
 
 - Managing Software
 - Command-Line Beginner's Class
-- Command-Line Master Class
 - Managing Users
-- Automating Tasks and Shell Scripting
-- System Monitoring Tools
-- Backing Up
-- Networking
-- Remote Access with SSH
-- Securing Your Machines
 
 ## Useful Resources
 
