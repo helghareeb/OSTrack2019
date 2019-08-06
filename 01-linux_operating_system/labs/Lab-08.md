@@ -22,10 +22,9 @@
   - Press CTRL + C
   - run `./p1 &`
   - **Question 2** What is the meaning of the output given?
-  - Now, run `./p2`
+  - Now, run `./p2 &`
   - To display the list of background processes, run the command `jobs`
 - To kill the background processes
   - bring the process to the foreground using the command `fg %` followed by the number of the process in the jobs list
   - Press `CTRL + C` to terminate the process
 - Terminate all the running jobs using the same procedure
-
