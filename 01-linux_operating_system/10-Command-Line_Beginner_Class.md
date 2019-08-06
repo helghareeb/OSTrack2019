@@ -165,7 +165,7 @@ Under Linux, permissions are grouped by owner, group, and others, with read, wri
 | rwx | rwx | rwx |
 
 - r
-- w 
+- w
 - x
 
 - 4
@@ -229,31 +229,19 @@ Numbers defined in `umask` are subtracted from the ultimate file permissions. If
 
 `$ umask 000`
 
-Note: We subtract from 666 - 
+Note: We subtract from 666 -
 
 ### File Permissions with `chgrp`
 
 `$ chgrp sudo filename`
 
-To display groups 
+To display groups
 
 `$ groups`
 
 ### File Permissions with `chown`
 
-`$ chown helghareeb:wheel filename`
-
-### Set User ID, Set Group ID, and Sticky Bit Permission
-
-`$ ls -l /usr/bin/passwd`
-
-This setting allows normal users to execute the command (as root) to make changes to a root-only accessible file `/etc/passwd`
-
-By default, `suid` and `sgid` are turned off on files. To set them, add an extra digit to the beginning of a number in a `chmod` command. Suid uses 4. Sgid uses 2. We can set both at the same time by using 6 (4+2).
-
-Example: for a file owned by root with current 711 permissions allowing anyone to run it, you can make it run as root with the following
-
-`$ chmod 47`` filename`
+`$ chown helghareeb:sudo filename`
 
 ## Working with Files
 
@@ -264,6 +252,12 @@ Example: for a file owned by root with current 711 permissions allowing anyone t
 ### `rmdir`
 
 ### `rm`
+
+`$ rm file1 file2 file3`
+
+`$ rm -rf <dir>`
+
+`$ rm -R <dir>`
 
 ### `mv`
 
@@ -284,5 +278,3 @@ Example: for a file owned by root with current 711 permissions allowing anyone t
 `$ sudo shutdown -h 0`
 
 `$ sudo shutdown -r now`
-
-`$ `
