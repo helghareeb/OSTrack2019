@@ -142,8 +142,6 @@ The more boxes you check, the wider your selection of software. It is a good ide
 
 Backports: software that is released for a newer version of Ubuntu but reprogrammed to be compatible with the current release.
 
-![](./imgs/02/11.png)
-
 Some Ubuntu releases are called LTS, for long-term support, and are intended for production use by most people. The interim releases are for those who feel they must have the most recent version of everything or those who help work on Ubuntu development. These releases are stable, but they are supported for only a short time, so if you choose to use them, you should plan to upgrade to the new release every six months. By ensuring that the release upgrade option is set to LTS releases only, you’ll be prompted to upgrade your version of Ubuntu only every two years; the next LTS version, 20.04, is scheduled to be released in April 2020.
 
 ## System Settings
@@ -204,5 +202,3 @@ Making backups is important. Do not use `bak` extension because this might get o
 `$ cp dmesg.txt dmesg_bk.txt`
 
 Suggestion: backupYYYYMMDD
-
-
