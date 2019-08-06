@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-f = open('fout','w')
+f = open('p1_out','w')
 x = 0
 while True:
   # print('X = {} \n'.format(x))
