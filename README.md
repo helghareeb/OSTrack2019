@@ -182,7 +182,7 @@ Laravel is a free, open-source framework used for the development of web applica
 
 ### Phase 3 - Final Projects (60h)
 
-#### Final Projects (60h)
+#### Final Projects (30h)
 
 The final projects are the culmination of the boot-camp. Students work together to put everything they have learnt (and more!) into practice: implemnting, configuring, and deploying an original project in teams of 3 or 4 over a 3 days period.
 
