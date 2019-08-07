@@ -16,7 +16,7 @@ In this repository, you will find:
 
 Open Source Track - 3 Months is a sponsored program that aims to:
 
-- Empower Open Source Community and Egyptian Universities with 
+- Empower Open Source Community and Egyptian Universities with
   - Highly educated, well trained Professional Developers
   - Very well designed and developed curriculum and content
   - Rebuild a new IT Professional mindset, that is capable of learning new techniques and tools immediately in a standard production level (move from being a student to become a professional)
