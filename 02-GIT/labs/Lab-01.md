@@ -50,8 +50,19 @@
     - `.git/refs/heads/ <branch>`
   - Switching Branches
     - `$ git checkout BRANCHNAME`
+ 
+- Merging Branches
+To merge branch NEWBRANCH into Master branch
+  - Checkout Master branch
+  - `$ git merge NEWBRANCH`
+  - `$ git branch -d NEWBRANCH` # delete branch
 
 - Tags
   - `$ git tag -l`
   - `.git/refs/tags/ <tag>`
+  - `$ git tag TAGNAME` # For current commit
+  - `$ git tag -e TAGNAME COMMITHASH `
 
+- Notes
+
+  - `$ git checkout branchname` # puts head into latest commit
