@@ -23,3 +23,16 @@ Repository URL
 - Delete the branch
 
 ### Phase 02
+
+- Add a new branch
+- Checkout the new branch
+- Add a folder in the branch
+- Add the following files
+  - <yourname>.exe
+  - <yourname>.md
+  - p1.py
+- Stage your changes
+- Commit your changes
+- Push your changes to a Remote branch
+  - Hint: `$ git push -u origin <branch_name>`
+- Delete the branch
