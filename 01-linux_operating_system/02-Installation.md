@@ -203,7 +203,7 @@ http://en.wikipedia.org/wiki/Redirection_%28computing%29
  - `>` "output to"
  - `>>` "append to"
  - `<` "input from"
- - `|` "pipe" --> `command1 | command2 ` executes command1, using its output as the input for command2
+ - `|` "pipe " --> `command1 | command2 ` executes command1, using its output as the input for command2
 
 
 `$ less dmesg.txt`
