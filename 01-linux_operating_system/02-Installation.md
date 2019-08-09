@@ -190,20 +190,20 @@ Ubuntu built-in error log: errors that don't affect the appearance of the sytem
 `$ dmesg`
 
 Commonly used with `grep` to filter out output. `dmesg` takes its output from `/var/log/messages`.
-## Note 1:
+### Note 1:
 Ubuntu no longer uses the `/var/log/messages` file by default. The same information is available in the file `/var/log/syslog` .
 
-`$ less /var/log/messages`
+`$ less /var/log/syslog`
 
 `$ dmesg > dmesg.txt`
-## Note 2 : 
+### Note 2 : 
 Redirection symbols 
 http://en.wikipedia.org/wiki/Redirection_%28computing%29
 
  - `>` "output to"
  - `>>` "append to"
  - `<` "input from"
- ### | "pipe"
+ - `|` "pipe" --> `command1 | command2 ` executes command1, using its output as the input for command2
 
 
 `$ less dmesg.txt`
