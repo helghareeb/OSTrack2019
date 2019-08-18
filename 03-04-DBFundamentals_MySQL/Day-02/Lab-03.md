@@ -1,9 +1,11 @@
 # بسم الله الرحمن الرحيم
 
-## MySQL Tutorial
+## Lab Requirements
 
-- MySQL Documentation
-  - Chapter 3: Tutorial
-    - <https://dev.mysql.com/doc/refman/8.0/en/tutorial.html>
-  - Chapter 11: Data Types
-    - <https://dev.mysql.com/doc/refman/8.0/en/data-types.html>
+- Implement physical database for musician physical schema .
+- Implement physical database for sales office physical schema .
+- Create Database Called iti
+- Create user 'itiadmin' with password 'admin'
+- Grant create,drop,alter,insert,select,delete,update on iti database
+- Show Current Date , version ,DATABASES 
+- login in MySQL with 'itiadmin' user
