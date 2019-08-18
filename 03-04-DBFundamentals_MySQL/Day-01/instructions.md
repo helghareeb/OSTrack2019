@@ -33,9 +33,7 @@
 
 ### PHP
 
-`$ sudo apt install phpmyadmin php-mbstring php-gettext`
-`$ sudo phpenmod mbstring`
-`$ sudo systemctl restart apache2`
+`$ sudo apt-get install php libapache2-mod-php php-mysql`
 
 ### PhpMyAdmin
 
@@ -63,3 +61,4 @@ Open Web browser:
 
   - <https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04>
   - <https://www.liquidweb.com/kb/install-phpmyadmin-ubuntu-18-04/>
+  - <https://phoenixnap.com/kb/how-to-install-lamp-stack-on-ubuntu>
