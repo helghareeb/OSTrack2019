@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Part 01
 
 In this part, you will learn about the powers of the `root` user.

@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Lab 02
 
 - Enable Universe and Multiuniverse Repository

@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Ubuntu Downloads
 
 <https://ubuntu.com/download>

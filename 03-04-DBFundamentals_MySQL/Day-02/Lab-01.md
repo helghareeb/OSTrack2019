@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## ERD into Tables
 
 - Slides

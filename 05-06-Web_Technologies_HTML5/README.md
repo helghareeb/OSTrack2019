@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## References
 
 - Web Programming with HTML5, CSS, and JavaScript - John Dean

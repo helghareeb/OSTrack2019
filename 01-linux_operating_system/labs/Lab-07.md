@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Start, Stop, Restart Services in Ubuntu
 
 ### List All Services

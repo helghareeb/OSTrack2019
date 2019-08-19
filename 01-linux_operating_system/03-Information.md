@@ -1,4 +1,5 @@
 # بسم الله الرحمن الرحيم
 
-## Background Information and Resources
+[TOC]
 
+## Background Information and Resources

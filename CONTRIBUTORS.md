@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Contributors
 
 - Mohamed Fathi <https://github.com//mohamedfathim>

@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Link Types
 
 - **Hard Link** low-level links which the system uses to create elements of the file system itself, such as files and directories.

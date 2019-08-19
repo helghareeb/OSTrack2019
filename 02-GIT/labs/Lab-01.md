@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Task: Build our own Grocery List
 
 ### Lab Steps

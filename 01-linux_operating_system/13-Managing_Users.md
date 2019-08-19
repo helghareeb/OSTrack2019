@@ -1,5 +1,9 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
+## User Management
+
 User Management and administration includes
 
 - Allocating and managing `/home` directories

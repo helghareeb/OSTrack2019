@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Lab Requirements
 
 `p1` file present in the same directory of this file

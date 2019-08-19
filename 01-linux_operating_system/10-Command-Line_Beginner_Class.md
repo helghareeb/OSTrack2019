@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Command-Line Beginner's Class
 
 - Powerful tool

@@ -1,5 +1,7 @@
 # بسم الله الرحمن الرحيم
 
+[TOC]
+
 ## Lab Requirements
 
 - Create Database Called 'iti'

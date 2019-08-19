@@ -1,5 +1,7 @@
 # In the Name of ALLAH
 
+[TOC]
+
 ## HISTORY PLACES PROJECT BRIEF
 
 ### Project Objective
@@ -127,6 +129,7 @@ As you proceed through the project, you should repeatedly return to this listof 
 **Task**
 
 1. Build the logical model from the previous conceptual model.
+2. Implement the presented model and queries using MySQL.
 
 ## References
 
