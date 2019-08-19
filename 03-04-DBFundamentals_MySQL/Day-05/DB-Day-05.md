@@ -21,7 +21,7 @@
 
 #### Create Procedure
 
-<pre>
+```sql
 `mysql> delimiter //`
 `mysql> CREATE PROCEDURE dorepeat(p1 INT)`
 `    -> BEGIN`
@@ -35,7 +35,7 @@
 `mysql> CALL dorepeat(1000);`
 
 `mysql> SELECT @x;`
-</pre>
+```
 
 #### Create Function
 
