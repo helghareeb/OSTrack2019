@@ -17,3 +17,8 @@ MySQL is an open source relational database that is free for most uses. It has w
 - Unions
 - Special functions
 - Views, Stored Procedures, Triggers
+
+## References
+
+- Principles of Database Management <www.pdbmbook.com>
+- Database Systems: Design, Implementation, and Management 13e <https://www.cengage.com/c/database-systems-design-implementation-management-13e-coronel/>

@@ -197,11 +197,11 @@ Web Development (Open Source) - 354 Hours
 
 - Linux Operating System (24h)
 - Database Fundamentals (24h)
+- MySQL (18h)
 - Introduction to Web Technologies (24h)
 - HTML5 (18h)
-- Bootstrap (12h)
 - JavaScript (24h)
-- MySQL (18h)
+- Bootstrap (12h)
 - jQuery (12h)
 - Apache Web Server (6h)
 - PHP (30h)
