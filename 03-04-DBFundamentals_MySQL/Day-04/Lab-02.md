@@ -96,13 +96,37 @@ As you proceed through the project, you should repeatedly return to this listof 
 
 ##### Functions #1
 
-1. A. Create a place
-2. B. Upload an image
-3. C. Create a userFunctions
+1. Create a place
+2. Upload an image
+3. Create a userFunctions
 
 ##### Functions #2
 
-2. A. Browse a hierarchy of places2B.  Browse photographs on a timeline2C.  Browse a list of usersFunction #33A.  Search places/photographs by keyword3B.  Search photographs by keyword and date3C.  Given a user, find similar users
+1. Browse a hierarchy of places
+2. Browse photographs on a timeline
+3. Browse a list of users
+
+#### Function #3
+
+1. Search places/photographs by keyword
+2. Search photographs by keyword and date
+3. Given a user, find similar users
+
+### Conceptual Model
+
+**Task**
+
+1. Using ERD, build the conceptual model
+2. Answer the following
+  1. Can you write a query to determine to what Places a user has contributedMediaItems?
+  2. How would you represent an isolated place in the Rocky Mountains withyour abstraction of Place?
+  3. Can  you  represent a full range of different kinds of media; do different media require different attributes?
+
+### Logical Model
+
+**Task**
+
+1. Build the logical model from the previous conceptual model.
 
 ## References
 
