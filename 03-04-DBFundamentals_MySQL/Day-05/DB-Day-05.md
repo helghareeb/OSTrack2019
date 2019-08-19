@@ -22,28 +22,30 @@
 #### Create Procedure
 
 ```sql
-`mysql> delimiter //`
-`mysql> CREATE PROCEDURE dorepeat(p1 INT)`
-`    -> BEGIN`
-`    ->   SET @x = 0;`
-`    ->   REPEAT SET @x = @x + 1; UNTIL @x > p1 END REPEAT;`
-`    -> END`
-`    -> //`
+mysql> delimiter //
+mysql> CREATE PROCEDURE dorepeat(p1 INT)
+    -> BEGIN
+    ->   SET @x = 0;
+    ->   REPEAT SET @x = @x + 1; UNTIL @x > p1 END REPEAT;
+    -> END
+    -> //
 
-`mysql> delimiter ;`
+mysql> delimiter ;
 
-`mysql> CALL dorepeat(1000);`
+mysql> CALL dorepeat(1000);
 
-`mysql> SELECT @x;`
+mysql> SELECT @x;
 ```
 
 #### Create Function
 
-`mysql> CREATE FUNCTION hello (s CHAR(20))`
-`mysql> RETURNS CHAR(50) DETERMINISTIC`
-`    -> RETURN CONCAT('Hello, ',s,'!');`
+```sql
+mysql> CREATE FUNCTION hello (s CHAR(20))
+mysql> RETURNS CHAR(50) DETERMINISTIC
+    -> RETURN CONCAT('Hello, ',s,'!');
 
-`mysql> SELECT hello('world');`
+mysql> SELECT hello('world');
+```
 
 ### Using Stored Routines
 
@@ -51,9 +53,7 @@
   - When multiple client applications are written in different languages or work on different platforms, but need to perform the same database operations.
   - When security is paramount. Banks, for example, use stored procedures and functions for all common operations. This provides a consistent and secure environment, and routines can ensure that each operation is properly logged. In such a setup, applications and users would have no access to the database tables directly, but can only execute specific stored routines.
 
--  Stored routines can provide improved performance because less information needs to be sent between the server and the client. The tradeoff is that this does increase the load on the database server because more of the work is done on the server side and less is done on the client (application) side. Consider this if many client machines (such as Web servers) are serviced by only one or a few database servers.
-
-## Stored Objects
+- Stored routines can provide improved performance because less information needs to be sent between the server and the client. The tradeoff is that this does increase the load on the database server because more of the work is done on the server side and less is done on the client (application) side. Consider this if many client machines (such as Web servers) are serviced by only one or a few database servers.
 
 ### Using Triggers
 
@@ -61,10 +61,11 @@
 
 Here is a simple example that associates a trigger with a table, to activate for INSERT operations. The trigger acts as an accumulator, summing the values inserted into one of the columns of the table.
 
-`mysql> CREATE TABLE account (acct_num INT, amount DECIMAL(10,2));`
-
-`mysql> CREATE TRIGGER ins_sum BEFORE INSERT ON account`
-`       FOR EACH ROW SET @sum = @sum + NEW.amount;`
+```sql
+mysql> CREATE TABLE account (acct_num INT, amount DECIMAL(10,2));
+mysql> CREATE TRIGGER ins_sum BEFORE INSERT ON account
+       FOR EACH ROW SET @sum = @sum + NEW.amount;
+```
 
 The `CREATE TRIGGER` statement creates a trigger named `ins_sum` that is associated with the account table. It also includes clauses that specify the trigger action time, the triggering event, and what to do when the trigger activates:
 
@@ -74,68 +75,66 @@ The `CREATE TRIGGER` statement creates a trigger named `ins_sum` that is associa
 
 To use the trigger, set the accumulator variable to zero, execute an INSERT statement, and then see what value the variable has afterward:
 
-`mysql> SET @sum = 0;`
-`mysql> INSERT INTO account VALUES(137,14.98),(141,1937.50),(97,-100.00);`
-`mysql> SELECT @sum AS 'Total amount inserted';`
-`
+```sql
+mysql> SET @sum = 0;
+mysql> INSERT INTO account VALUES(137,14.98),(141,1937.50),(97,-100.00);
+mysql> SELECT @sum AS 'Total amount inserted';
+```
 
-o destroy the trigger, use a DROP TRIGGER statement. You must specify the schema name if the trigger is not in the default schema:
+To destroy the trigger, use a DROP TRIGGER statement. You must specify the schema name if the trigger is not in the default schema:
 
 `mysql> DROP TRIGGER test.ins_sum;`
 
 As of MySQL 5.7.2, it is possible to define multiple triggers for a given table that have the same trigger event and action time.
 
-`mysql> CREATE TRIGGER ins_transaction BEFORE INSERT ON account`
-       `FOR EACH ROW PRECEDES ins_sum`
-       `SET`
-       `@deposits = @deposits + IF(NEW.amount>0,NEW.amount,0),`
-       `@withdrawals = @withdrawals + IF(NEW.amount<0,-NEW.amount,0);`
+```sql
+mysql> CREATE TRIGGER ins_transaction BEFORE INSERT ON account
+       FOR EACH ROW PRECEDES ins_sum
+       SET
+       @deposits = @deposits + IF(NEW.amount>0,NEW.amount,0),
+       @withdrawals = @withdrawals + IF(NEW.amount<0,-NEW.amount,0);
+```
 
 The following example  defines an UPDATE trigger that checks the new value to be used for updating each row, and modifies the value to be within the range from 0 to 100. This must be a `BEFORE` trigger because the value must be checked before it is used to update the row:
 
-`mysql> delimiter //`
-`mysql> CREATE TRIGGER upd_check BEFORE UPDATE ON account`
-`       FOR EACH ROW`
-`       BEGIN`
-`           IF NEW.amount < 0 THEN`
-`               SET NEW.amount = 0;`
-`           ELSEIF NEW.amount > 100 THEN`
-`               SET NEW.amount = 100;`
-`           END IF;`
-`       END;//`
-`mysql> delimiter ;`
+```sql
+mysql> delimiter //
+mysql> CREATE TRIGGER upd_check BEFORE UPDATE ON account
+       FOR EACH ROW
+       BEGIN
+           IF NEW.amount < 0 THEN
+               SET NEW.amount = 0;
+           ELSEIF NEW.amount > 100 THEN
+               SET NEW.amount = 100;
+           END IF;
+       END;//
+mysql> delimiter ;
+```
 
 ### Using Views
 
  A view can be created from many kinds of `SELECT` statements. It can refer to base tables or other views. It can use joins, `UNION`, and subqueries. The `SELECT` need not even refer to any tables. The following example defines a view that selects two columns from another table, as well as an expression calculated from those columns:
 
-`mysql> CREATE TABLE t (qty INT, price INT);`
-`mysql> INSERT INTO t VALUES(3, 50), (5, 60);`
-`mysql> CREATE VIEW v AS SELECT qty, price, qty*price AS value FROM t;`
-`mysql> SELECT * FROM v;`
+```sql
+mysql> CREATE TABLE t (qty INT, price INT);
+mysql> INSERT INTO t VALUES(3, 50), (5, 60);
+mysql> CREATE VIEW v AS SELECT qty, price, qty*price AS value FROM t;
+mysql> SELECT * FROM v;
+```
 
 ## Functions vs. Stored Procedures
 
 - Source: <https://www.quora.com/What-difference-between-stored-procedures-and-functions-in-MySQL>
 
 1. A FUNCTION always returns a value using the return statement. Practical scenarios, when expecting a value to be returned which in turn helps for computation in rest of code.
-
 2. PROCEDURE may return one or more values through parameters or may not return any at all.
-
-  - **IN,OUT,INOUT** parameters are different types. IN will be the input to the procedure. OUT will be the output from the procedure and this helps to get the output from the procedure. INOUT usually a same parameter behaves as input as well as output.
-
+  1. **IN,OUT,INOUT** parameters are different types. IN will be the input to the procedure. OUT will be the output from the procedure and this helps to get the output from the procedure. INOUT usually a same parameter behaves as input as well as output.
 3. Functions are normally used for computations where as procedures are normally used for executing business logic.
-
 4. A Function returns 1 value only. Procedure can return multiple values (max 1024).
-
 5. Stored procedure always returns an integer value of zero by default. Whereas function return types could be scalar or table or table values. This is because Functions mainly meant for computation.
-
 6. Stored procedures have a precompiled execution plan, where as functions are not. Because of precompiled plan, for routines, stored procedure is preferred a lot.
-
 7. A function can be called directly by SQL statement like select `func_name` from dual while procedures cannot.
-
 8. Stored procedure has the security and reduces the network traffic and also we can call stored procedure in any no. of applications at a time.
-
 9. A Function can be used in the SQL Queries while a procedure cannot be used in SQL queries that cause a major difference b/w function and procedures.
 
 ## References
