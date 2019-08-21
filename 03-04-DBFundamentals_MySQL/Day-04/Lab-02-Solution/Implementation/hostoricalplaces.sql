@@ -27,7 +27,7 @@ CREATE TABLE `audiofiles` (
   `length` int(255) DEFAULT NULL,
   PRIMARY KEY (`med_id`),
   CONSTRAINT `media_fk4` FOREIGN KEY (`med_id`) REFERENCES `mediaitems` (`med_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -54,7 +54,7 @@ CREATE TABLE `category` (
   PRIMARY KEY (`category_id`),
   KEY `category_fk1` (`pcid`),
   CONSTRAINT `category_fk1` FOREIGN KEY (`pcid`) REFERENCES `category` (`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,7 +79,7 @@ CREATE TABLE `imagefiles` (
   `height` int(255) DEFAULT NULL,
   PRIMARY KEY (`med_id`),
   CONSTRAINT `media_fk5` FOREIGN KEY (`med_id`) REFERENCES `mediaitems` (`med_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `keymedia` (
   KEY `media_fk6` (`med_id`),
   CONSTRAINT `keyword_fk1` FOREIGN KEY (`keyword_id`) REFERENCES `keyword` (`keyword_id`),
   CONSTRAINT `media_fk6` FOREIGN KEY (`med_id`) REFERENCES `mediaitems` (`med_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -131,7 +131,7 @@ CREATE TABLE `keyword` (
   PRIMARY KEY (`keyword_id`),
   KEY `category_fk2` (`cid`),
   CONSTRAINT `category_fk2` FOREIGN KEY (`cid`) REFERENCES `category` (`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +157,7 @@ CREATE TABLE `mediaitems` (
   `URL` varchar(80) DEFAULT NULL,
   `size` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`med_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,7 @@ CREATE TABLE `places` (
   KEY `place_fk1` (`pp_id`),
   CONSTRAINT `place_fk1` FOREIGN KEY (`pp_id`) REFERENCES `places` (`place_id`),
   CONSTRAINT `user_fk3` FOREIGN KEY (`user_creator`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +217,7 @@ CREATE TABLE `submissions` (
   CONSTRAINT `media_fk3` FOREIGN KEY (`med_id`) REFERENCES `mediaitems` (`med_id`),
   CONSTRAINT `place_fk3` FOREIGN KEY (`place_id`) REFERENCES `places` (`place_id`),
   CONSTRAINT `user_fk5` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,7 +243,7 @@ CREATE TABLE `users` (
   `imageURL` varchar(80) DEFAULT NULL,
   `interests` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -271,7 +271,7 @@ CREATE TABLE `views` (
   KEY `users_fk1` (`user_id`),
   CONSTRAINT `media_fk1` FOREIGN KEY (`med_id`) REFERENCES `mediaitems` (`med_id`),
   CONSTRAINT `users_fk1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -298,7 +298,7 @@ CREATE TABLE `visits` (
   KEY `place_fk2` (`place_id`),
   CONSTRAINT `place_fk2` FOREIGN KEY (`place_id`) REFERENCES `places` (`place_id`),
   CONSTRAINT `user_fk4` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -326,7 +326,7 @@ CREATE TABLE `votes` (
   KEY `users_fk2` (`user_id`),
   CONSTRAINT `media_fk2` FOREIGN KEY (`med_id`) REFERENCES `mediaitems` (`med_id`),
   CONSTRAINT `users_fk2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

@@ -46,7 +46,7 @@ create table visits (user_id int,
                     constraint user_fk4 foreign key (user_id) references users (user_id),
 					constraint place_fk2 foreign key (place_id) references places (place_id)
 );
-show tables;
+
 
 create table submissions (user_id int,
 							place_id int,
@@ -89,7 +89,7 @@ create table keymedia (keyword_id int,
                         constraint keyword_fk1 foreign key (keyword_id) references keyword (keyword_id),
                         constraint media_fk6 foreign key (med_id) references mediaitems (med_id)
 );
-show tables;
+
                     
                         
                         
