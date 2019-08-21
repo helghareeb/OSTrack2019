@@ -128,7 +128,9 @@ mysql> SELECT * FROM v;
 
 1. A FUNCTION always returns a value using the return statement. Practical scenarios, when expecting a value to be returned which in turn helps for computation in rest of code.
 2. PROCEDURE may return one or more values through parameters or may not return any at all.
-  1. **IN,OUT,INOUT** parameters are different types. IN will be the input to the procedure. OUT will be the output from the procedure and this helps to get the output from the procedure. INOUT usually a same parameter behaves as input as well as output.
+
+  - **IN,OUT,INOUT** parameters are different types. IN will be the input to the procedure. OUT will be the output from the procedure and this helps to get the output from the procedure. INOUT usually a same parameter behaves as input as well as output.
+
 3. Functions are normally used for computations where as procedures are normally used for executing business logic.
 4. A Function returns 1 value only. Procedure can return multiple values (max 1024).
 5. Stored procedure always returns an integer value of zero by default. Whereas function return types could be scalar or table or table values. This is because Functions mainly meant for computation.
