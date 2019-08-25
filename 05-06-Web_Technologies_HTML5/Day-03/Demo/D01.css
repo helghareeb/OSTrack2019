@@ -1,0 +1,12 @@
+tr:first-of-type {
+  background-color: palegreen;
+}
+
+td:nth-of-type(2) {
+    text-align: right;
+    background-color: blueviolet;
+}
+
+ul > li:last-of-type {
+    background-color: aqua;
+}
