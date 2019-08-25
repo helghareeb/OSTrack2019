@@ -48,3 +48,25 @@
 |`git rebase`|Reapply commits on top of another base tip|<https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase>|
 |`git pull`|The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. |<https://www.atlassian.com/git/tutorials/syncing/git-pull>|
 |`git push`|Update remote refs along with associated objects|<https://www.atlassian.com/git/tutorials/syncing/git-push>|
+|`git remote`|The git remote command lets you create, view, and delete connections to other repositories. |https://www.atlassian.com/git/tutorials/syncing|
+|`git remote -v`|List the remote connections you have to other repositories.|-|
+|`git push --tags`|The --tags flag sends all of your local tags to the remote repository.|https://www.atlassian.com/git/tutorials/syncing/git-push|
+|`git tag -d <tag name >`|to delete tag from local repo  | - |
+|`git push :<tag name>` | to delete tag from remote repo | - | 
+
+
+----------------------------------------------------------------------------------------------------------------------------
+### Note : <br>
+#### How to sync your fork : <br>
+1. open terminal and change directory to your working repo . <br>
+2. Create a new connection with remote repo : 
+    * `git remote add upstream <URL for original(remote) repo >` 
+3. list your remote repo [must remote repo 'upstream' in the list] :
+    * `git remote -v`
+3. Fetsh the updates 
+    * `git fetsh upstream ` 
+4. Merge the changes to your master 
+    * `git merge upstream/master`
+5. Push updates to your fork 
+    * `git push origin master`
+#### video : https://www.youtube.com/watch?v=-zvHQXnBO6c
