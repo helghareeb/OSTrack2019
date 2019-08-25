@@ -1,0 +1,117 @@
+<!doctype html > 
+<html>
+<head>
+<meta charset='utf-8' > 
+<title> Explain the code </title>
+<style> 
+body{
+font-size:20px;
+font-family:serif;
+}
+h1{
+color:purple ;
+text-align:center;
+
+}
+h3,h4{
+background-color:lightgreen;
+color:green;
+width:500px;
+padding:15px;
+}
+code{
+font-weight:bold;
+background:rgba(50,50,50,.3);
+}
+</style>
+</head>
+<body>
+<h1> Python Tutorials </h1>
+<h3>  This Example of Python code </h3> 
+<!--this code for open file in python ---------------->
+<pre> 
+#!/usr/bin/python3
+
+f = open('fout','w')
+x = 0
+while True:
+  x += 1
+  f.write(str(x))
+  f.write('\n')
+
+</pre>
+<!--compile  file in python ---------------->
+
+ <h4> Explain : </h4>
+<p>
+<code>#!/usr/bin/python3</code>
+<br> 
+This compiles file with compiler of python3
+</p>
+<hr>
+<!--open function  in python ---------------->
+<p>
+<code>f = open('fout','w')</code>
+ This command open file by <code> open() </code> function and write the output in file <q>fout</q>
+<br> 
+<code><q> w </q></code>&nbsp; Stands for write in the file 
+ </p>
+<hr>
+<!--variable  in python ---------------->
+<p> 
+<code> 
+x = 0 
+</code>
+This a variable which has initial value = 0
+</p>
+
+<hr>
+<!--while loop in python ---------------->
+<p>
+<code> while True :  </code>
+While is loop running until condition is satisfied 
+<br> 
+<code> True  : </code> is the condition 
+</p>
+  <hr>
+
+<!--counter of while loop in python ---------------->
+<p>
+<code> x += 1  : </code>
+This is counter which add 1 every time while loop iterate 
+</p>
+<hr>
+
+<!--str() function  in python ---------------->
+<p>
+<Code> f.write(str(x))  : </code>
+Write the output in file <q>fout</q> as string <br>
+<code> <q>str() : </q></code> is the function which return values as string 
+</p> 
+<hr>
+
+<!--write function  in python ---------------->
+<p>
+<code>f.write("\n")</code><br>
+<code><q>\n</q></code> Make new line  
+</p>
+<hr> 
+
+<!--blockqoute and definition in python ---------------->
+<p> 
+This tutorial is running on linux ubuntu 
+<br> <br>
+<blockqoute cite="https://www.en.m.wikipedia.org/wiki/ubuntu"><h4>Ubuntu  :</h4> 
+<ol>
+<li>Humanity </li>
+<li>Iam because we are </li>
+<li>Humanity towards others </li>
+</ol>
+</blockqoute>
+<hr>
+<h4>multi processing </h4>
+<p>Running more than one process at the same time </p>
+</body>
+</html>
+
+  
