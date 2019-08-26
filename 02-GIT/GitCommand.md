@@ -48,3 +48,4 @@
 |`git rebase`|Reapply commits on top of another base tip|<https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase>|
 |`git pull`|The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. |<https://www.atlassian.com/git/tutorials/syncing/git-pull>|
 |`git push`|Update remote refs along with associated objects|<https://www.atlassian.com/git/tutorials/syncing/git-push>|
+| Sync Fork | Sync a fork of a repository to keep it up-to-date with the upstream repository. | <https://help.github.com/en/articles/syncing-a-fork> |

@@ -33,11 +33,6 @@ table, th, td {border: solid thin; border-collapse: collapse;}
 ```
 
 8. What is a screen reader?
-9. For each HTML element, provide a CSS property-value pair that implements its presentation functionality.
-  1. table
-  2. caption
-  3. `tr`
-  4. `td`
 10. Why is the `div` element a good choice for CSS implementation of table and row components?
 11. The `display: table-cell` property does not work well with elements in the embedded category like img , audio , and video . How can you work around this problem?
 12. Describe how to apply absolute positioning to an element.
