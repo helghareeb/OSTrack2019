@@ -4,6 +4,7 @@
 
 ## Resources
 
+- 4 Ways to Avoid Merge Commits in Git [Important] <http://kernowsoul.com/blog/2012/06/20/4-ways-to-avoid-merge-commits-in-git/>
 - <http://excess.org/article/2008/07/ogre-git-tutorial/>
 - Slides: <http://edgyu.excess.org/git-tutorial/2008-07-09/intro-to-git.pdf>
 - Videos
