@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+    <!-- <script src="jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <style>
+   
+    </style>
+    <script src="jquery-3.3.1.js"></script>
+
+    <script>
+    </script>
+    
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+        //    $("li").css("color","red").css("background-color","yellow");
+        //    $("li").css({
+        //        width:"100px",
+        //        height:"100px",
+        //        color:"red"
+
+        //    });
+        $("ul").css("background-color","yellow").hide(2000).delay(2000).show(3000);
+
+            /*** Basic selectors **/
+            //1- Tag name
+            //$("p").css("border","3px solid red");
+            //$("p,li").css("border","3px solid red");
+
+            //2- class name
+            //$(".a").css("border","3px solid red");
+            //$("p.a").css("border","3px solid red");
+
+            //3- ID 
+            //$("#example").css("border","3px solid red");
+            //$("#para1").css("border","3px solid red");
+
+            //4-All items
+            //$("*").css("border","3px solid red");
+
+            /*** Advanced selectors **/
+            //1- "parent > child" (select child element that an immediate descendants of the parent )
+            //$("div > p").css("background-color","pink"); //replace div with body
+
+            //2- "ancestor descendant"  (descendants selectors) select descendants as long as they have ancestor above them 
+            //$("div  p").css("background-color","pink");
+
+            //3- "prev + next" Next Adjacent(select the next element if it is immediately preceded By prev element )
+            //$("div + img").css("border","3px solid green");
+
+            //4-"prev ~ nextAll " Next Siblings (Selects all siblings come after prev elemnt)
+
+            //$("div ~ img").css("border","3px solid green"); //what if we surround last image with <a>
+
+            /** Attributes Filters **/
+            // Any element has Attributes
+            //$("p[class]").css("background-color","pink");
+            //$("p[class='a b']").css("background-color","pink");
+            //$("p.a.b").css("background-color","pink");
+            // has specified attribute
+            //$("input[type=button]").css("background-color","pink");
+           
+            //$("input[type!=button]").css("background-color","pink");
+            // starts with
+            //$("a[href^=http]").css("background-color","pink");
+            //ends with
+            //$("a[href$='.com']").css("background-color","pink");
+            //contains	
+            //$("a[href*='iti']").css("background-color","pink");
+            //multi attributes
+            //$("input[type=text][value*='here']").css("background-color","pink");	
+
+
+
+            /** Filters **/
+            //positions
+            // A- first, last,gt,lt,odd,even and eq (according to the whole page)
+            
+            
+            // 1- $(#example .a:first)
+            //eq zero based 
+            // 2- $("li:eq(4)").css("background-color","pink");
+            // 3- $("ul:first li:last")
+            //lt,gt odd ,even    on li and tables
+            // 4-  $("table:first td:odd").css("color","red")
+            // 5- $("table:first tr:even td:eq(0)).css("color","red")
+            // 6- $("table:first tr:even td:gt(1)).css("color","red")
+
+            // B-  nth-child  according to each container
+            //nth-child one based
+            // 1- $("li:first-child").css("background-color","pink");
+            // 2- $("tr:last-child td:odd").css("color","red")
+            // 3- $("li:nth-child(4)").css("background-color","pink");
+
+            
+
+
+
+            // C-  contains
+            //$("p:contains('3')").css("background-color","pink");
+
+            // D- not
+
+            //$('p:not(.a)').css("background-color","pink");
+            //$('p:not(p[class])').css("background-color","pink");
+            //$('p:not(:eq(2))').css("background-color","pink");
+
+            // E- has
+            //$("div:has(p[class])").css("background-color","pink");
+
+            // F- input 
+            //$(":button").css("background-color","pink");
+            //$(":text:first").css("background-color","pink");
+
+            // G- :hidden
+            //$("p:hidden")
+
+            // H- :checked
+            //$("*[name=courses]:checked")
+
+            // I-  :empty    <div></div>
+            // J-  :parent   <div>hello Jquery</div> or <div><p>hello</p></div>
+            /***************************************** Traversing ************************/
+            //traversing is easly accsses HTML elements through jquery methods
+
+            // A- children();  //taking css selecor 'direct child'
+            //$("#example").children().css("border","2px dotted orange");
+            //$("#example").children("span").css("border","2px dotted orange");
+
+            // B-  first,last,eq
+            // $("li").first().css("color","red")
+            // $("li").last().css("color","red")
+            // $("li").eq(0).css("color","red")
+            //$("ul").first().children("li").last()
+            //note $("table").first().children("tr") // nothing will return but this will work $("table").first().children().children("tr")
+                
+            // C- next,prev,nextAll, prevAll
+             elm = $("#para1");
+            //next only get next element 
+            //elm.next().css("border","2px dotted orange");
+            //elm.next("div").css("border","2px dotted orange");
+            //elm.nextAll().css("border","2px dotted orange");
+            //elm.nextAll("div").css("border","2px dotted orange");
+            //elm.prev().css("border","2px dotted orange");
+            //elm.parent().css("border","2px dotted orange");
+            //elm.parents().css("border","2px dotted orange");
+            //elm.parentsUntil($("HTML")).css("border","2px dotted orange");
+            //siblings
+            //elm.siblings()
+
+            // D- is
+             //$("li").first().is(":contains('the')")
+
+             // E- filter
+             //$().filter(selector) filter the item itself not it's children
+            //$("li").filter(":even").css("background-color","yellow");
+            //$("#example").filter($("p")) won't work becase p is child
+            //$("#example").children().filter("p").hide(3000);
+
+            //$("div").filter("#example").css("border-color","yellow")
+
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+    <h1 style=" visibility: hidden"> Basic JQuery Selectors </h1>
+    <p> Selectors are used to fetch page elements inside jquery Array </p>
+    <p style="display: none"> They Use CSS-Like Syntax as follow </p>
+    <ul id="list1">
+        <li class="a b"><code>$("<i>tag</i>")</code>: Select all of the &lt;tag&gt; elements</li>
+        <li class="a"><code>$("<i>.className</i>")</code>: Select all elements that have the <i>className</i> class applied</li>
+        <li class="b"><code>$("#identifier")</code>: Select the element with the id of <i>identifier</i></li>
+        <li class="b"><code>$("<i>tag.className</i>")</code>: Select all &lt;tag&gt; elements that have the <i>className</i> class applied</li>
+    </ul>
+
+    <h1>jQuery Hierarchy Selectors</h1>
+    <p>To select elements based on their position in the document tree, use the Hierarchy Selectors.</p>
+    <p>The Hierarchy Selectors work by examining the position of target elements relative to other elements:</p>
+    <ol id="list2">
+        <li><code>$("parent > child")</code>: selects "child" elements that are immediate descendants of the "parent"</li>
+        <li><code>$("ancestor descendant")</code>: selects "descendant" elements as long as they have an "ancestor" element somewhere above them</li>
+        <li><code>$("prev + next")</code>: selects the "next" element if it is immediately preceded by a "prev" element</li>
+        <li><code>$("prev ~ siblings")</code>: selects all "siblings" elements that come after a "prev" element</li>
+    </ol>
+    <div id="example">
+        <a><p class="a">This is paragraph 1 </p></a>
+        <p id="para2">This is paragraph 2 </p>
+        <p class="a">This is paragraph 3  <span> this is span 1</span>  </p>
+        <span> <p id="para4">This is paragraph 4 </p></span>
+    </div>
+    <img src="images/1.jpg" />
+   <img src="images/2.jpg" />
+
+    <h3> HTML Table 1</h3>
+    <table>
+        <tr><td>Cell 1 </td><td> Cell 2</td> </tr>
+        <tr><td>Cell 3 </td><td> Cell 4</td> </tr>
+        <tr><td>Cell 5 </td><td> Cell 6</td> </tr>
+    </table>
+    <h3> HTML Table 2</h3>
+    <table>
+        <tr><td><a href="http://www.iti.gov.eg"> ITI </a> </td><td> Cell 2</td> </tr>
+        <tr><td><a href="http://www.google.com"> google </a> </td><td> Cell 4</td> </tr>
+        <tr><td><a href="next.html"> MyPage </a> </td><td> Cell 6</td> </tr>
+    </table>
+
+    <h3> HTML Form </h3>
+    <form>
+        <fieldset>
+
+            <legend> Filters Form </legend>
+
+            <input type="text" value="Type your name here" />
+            <br />
+            <input type="text" value="Type your age" />
+           
+            <br />
+            courses: <br/>
+            <input type="checkbox" name="courses" value="JS" /> JS<br/>
+            <input type="checkbox" name="courses" value="JQuery" /> JQuery<br/>
+            <input type="checkbox" name="courses" value="Nodejs" /> Nodejs<br/>
+            <input type="checkbox" name="courses" value="mogoDB" /> mogoDB<br/>
+            <input type="checkbox" name="courses" value="ES" /> ES<br/>
+            <input type="checkbox" name="courses" value="Ajax" /> Ajax<br/>
+
+            Agree <input type="checkbox" value="1" checked/> 
+            <input type="button" value="send" />
+        </fieldset>
+    </form>
+    <br />
+    <br />
+    <br />
+</body>
+</html>

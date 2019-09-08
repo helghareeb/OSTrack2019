@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <script>
+
+        class Shape
+        {
+            constructor(color)
+            {
+                // console.log(new.target.name);
+                if(new.target.name=="Shape")
+                {
+                    throw new Error("Abstract Class");
+                }
+                this.color=color;
+            }
+        }
+        class Rectangle extends Shape
+        {
+            constructor(width,height,color)
+            {
+                super(color);
+                this.width=width;
+                this.height=height;
+            }
+            getArea()
+            {
+                return this.width*this.height;
+            }
+
+        }//rectangel
+
+        class Sqaure extends Rectangle
+        {
+
+            constructor(dim,color)
+            {
+                super(dim,dim,color)
+                // this.width=this.height=dim;
+            }
+
+
+        }
+        let rect1=new Rectangle(2,3,"red");
+        let square1=new Sqaure(2,"green");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        class Person
+        {
+            constructor(firstName="eman",lastName="fathi",salary=1000)
+            {
+                this.firstName=firstName;
+                this.lastName=lastName;
+                this.salary=salary;
+            }
+            get fullName(){
+                return this.firstName+ " "+this.lastName;
+
+            }
+
+            set fullName(Name)
+            {
+                this.firstName=Name.split(" ")[0];
+                this.lastName=Name.split(" ")[1];
+            }
+
+            get netSalary(){ return (this.salary-this.salary*0.2);}
+
+            // getFullName()
+            // {
+            //     return this.firstName+ " "+this.lastName;
+            // }
+            // setFullName(fName,lName)
+            // {
+            //     this.firstName=fName;
+            //     this.lastName=lName;
+            // }
+            toString()
+            {
+                console.log(this.firstName,this.lastName,this.salary);
+            }
+
+
+        }//end of class
+
+
+        let person1=new Person();
+        let person2=new Person("mona","ahmed",2000);
+        
+        
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

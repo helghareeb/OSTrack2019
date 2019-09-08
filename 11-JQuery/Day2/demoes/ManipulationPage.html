@@ -1,0 +1,133 @@
+﻿ <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="jquery-3.2.1.js"></script>
+
+    <script>
+
+        $(function () {
+         
+            //******** insert  element inside another element   
+            // $("div").prepend("<span style='color:red'> This is span</span>");
+            spanElmenet=$("<span style='color:red'> This is span</span>");
+            //  $("div").before(spanElmenet);
+            //  $("div").append(spanElmenet);
+            // append   -> INSIDE and in the begining of the selected tag
+            // prepend   -> INSIDE and in the end of the selected tag
+			// $("#example").preppend("<span style='color:red'> This is span </span>");
+
+           
+            
+
+            //1- htmlString   as span
+            //2- html element
+            spanObj=document.createElement("span");
+            spanObj.innerText = "Span Created";
+            spanObj.classList.add("rgElm");
+            //$("#example").append(spanObj,[ " This is simple text ", "<span style='color:red'> This is span </span>"]);
+            //$("div").append(spanObj);
+            //3- text
+
+            //4- jquery
+            
+            // spanJqueyElm = $("<span style='color:red'> This is span Elm</span>");
+            // $("div").append(spanJqueyElm);
+            //moving
+
+            //existing elments
+            //$(spanObj).appendTo("#example");
+            //$(spanObj).prependTo("#example");
+
+
+            //********************* insertOutside
+            // before and after   -------> insertBefore and insertAfter
+           
+
+            //*************wrap Element inside and ouside
+            // wrap , wrapInner , wrapAll , unwrap
+            // $("div p").wrap("<p style='border:3px red solid'></p>");
+            
+            
+            
+            //$("div").wrapInner("<p style='border:red solid 3px'>This is wrapping par.</p>");
+            //$("div p").wrapAll("<p style='border:red solid 3px'>This is wrapping par.</p>");
+            
+            //*****************************  creating elements
+
+
+            //liObj = $("<li> new item </li>").css("color", "green");
+            //$("ul:first").append(liObj);
+
+            //another way is JS function
+
+            //$   selector , load , creating new elemnt
+
+
+
+
+            /***************************  moving elements with clone or not*/
+            
+         $("ul:first li").click(function () { alert("click"); });
+
+
+          liElmObject=$("ul:first li:first");
+            $("ul:last").append(liElmObject.clone(true) );
+
+
+
+
+
+            ///////////////// REMOVING
+            //adding events to p
+           
+            $("div p").click(function () { alert("click"); });
+
+			//1- empty    
+            //$("div p").empty()
+
+            //2- remove
+            //pArray = $("div p").remove();
+            //$("div").append(pArray);
+            //3- detach
+            //pArray = $("div p").detach();
+            //$("div").append(pArray);
+
+
+
+        })//end of load
+    </script>
+</head>
+<body>
+    <h1>Inserting document content</h1>
+    <p>Content can be inserted at various points in the document, relative to existing content, using a variety of jQuery methods built for each purpose.</p>
+    <p>There are two sets of insertion functions: one set for inserting content inside of other content, and one for inserting outside of other content.</p>
+    <ul id="list1">
+        <li class="a"><code>append()</code>: Appends content to the inside of the matched elements</li>
+        <li class="a"><code>prepend()</code>: Prepends content to the inside of the matched elements</li>
+        <li class="a"><code>appendTo()</code>: Appends the specified content to the inside of the matched elements</li>
+        <li class="a"><code>prependTo()</code>: Prepends the specified content to the inside of the matched elements</li>
+    </ul>
+    <ul>
+        <li class="a"><code>after()</code>: Appends content to the outside of the matched elements</li>
+        <li class="a"><code>before()</code>: Prepends content to the outside of the matched elements</li>
+        <li class="a"><code>insertAfter()</code>: Takes the specified content and appends it outside of the specified elements</li>
+        <li class="a"><code>insertBefore()</code>: Takes the specified content and prepends it outside of the specified elements</li>
+    </ul>
+    <div id="example">
+        <p class="a">This is paragraph 1</p>
+        <p id="para1">This is paragraph 2</p>
+        <p class="b">This is paragraph 3</p>
+        <p id="para4">This is paragraph 4</p>
+        <p id="para5">This is paragraph 5</p>
+
+    </div>
+    <form>
+        <input type="button" value="delete" />
+        <input type="button" value="recover" />
+
+
+    </form>
+</body>
+</html>

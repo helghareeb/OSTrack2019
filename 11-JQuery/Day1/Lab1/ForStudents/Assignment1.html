@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	 <title>Using Basic jQuery Selectors</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+	<script>
+		$(function(){
+		/* selectors and traversing to fincd the following elements
+		1- change background color for all p and li elements (using one selector).
+		2- set border to "3px solid green" for all elements having class a
+		3- change img borders , width and height 
+		4- choose all paragraphs that are direct child for div 
+		then change their color and background color
+		5- change color for anchors starts with http keyword 
+		6- choose first row from each table and change it’s background color to gray
+		7- choose first row in the page and change its color to pink
+		8- Select all odd li's in each list on page and change their font family and size
+		9- select next element to first direct paragraph inside the first div element on pade
+		   and alerting its content
+		10- find all h3 tags after image on page and change their color to green
+		*/  			
+		});
+	</script>
+	</head>
+	<body>
+    <h1 > Basic JQuery Selectors </h1>
+    <p> Selectors are used to fetch page elements inside jquery Array </p>
+    <p style="display: none"> They Use CSS-Like Syntax as follow </p>
+    <ul id="list1">
+        <li class="a b"><code>$("<i>tag</i>")</code>: Select all of the &lt;tag&gt; elements</li>
+        <li class="a"><code>$("<i>.className</i>")</code>: Select all elements that have the <i>className</i> class applied</li>
+        <li class="b"><code>$("#identifier")</code>: Select the element with the id of <i>identifier</i></li>
+        <li class="b"><code>$("<i>tag.className</i>")</code>: Select all &lt;tag&gt; elements that have the <i>className</i> class applied</li>
+    </ul>
+
+    <h1>jQuery Hierarchy Selectors</h1>
+    <p>To select elements based on their position in the document tree, use the Hierarchy Selectors.</p>
+    <p>The Hierarchy Selectors work by examining the position of target elements relative to other elements:</p>
+    <ol id="list2">
+        <li><code>$("parent > child")</code>: selects "child" elements that are immediate descendants of the "parent"</li>
+        <li><code>$("ancestor descendant")</code>: selects "descendant" elements as long as they have an "ancestor" element somewhere above them</li>
+        <li><code>$("prev + next")</code>: selects the "next" element if it is immediately preceded by a "prev" element</li>
+        <li><code>$("prev ~ siblings")</code>: selects all "siblings" elements that come after a "prev" element</li>
+    </ol>
+    <div id="example">
+        <a><p class="a">This is paragraph 1 </p></a>
+        <p id="para2">This is paragraph 2 </p>
+        <p class="a">This is paragraph 3  <span> this is span 1</span>  </p>
+        <span> <p id="para4">This is paragraph 4 </p></span>
+    </div>
+    <img src="images/1.jpg" />
+   <img src="images/2.jpg" />
+
+    <h3> HTML Table 1</h3>
+    <table>
+        <tr><td>Cell 1 </td><td> Cell 2</td> </tr>
+        <tr><td>Cell 3 </td><td> Cell 4</td> </tr>
+        <tr><td>Cell 5 </td><td> Cell 6</td> </tr>
+    </table>
+    <h3> HTML Table 2</h3>
+    <table>
+        <tr><td><a href="http://www.iti.gov.eg"> ITI </a> </td><td> Cell 2</td> </tr>
+        <tr><td><a href="http://www.google.com"> google </a> </td><td> Cell 4</td> </tr>
+        <tr><td><a href="next.html"> MyPage </a> </td><td> Cell 6</td> </tr>
+    </table>
+
+    <h3> HTML Form </h3>
+    <form>
+        <fieldset>
+
+            <legend> Filters Form </legend>
+
+            <input type="text" value="Type your name here" />
+            <br />
+            <input type="text" value="Type your age" />
+           
+            <br />
+            courses: <br/>
+            <input type="checkbox" name="courses" value="JS" /> JS<br/>
+            <input type="checkbox" name="courses" value="JQuery" /> JQuery<br/>
+            <input type="checkbox" name="courses" value="Nodejs" /> Nodejs<br/>
+            <input type="checkbox" name="courses" value="mogoDB" /> mogoDB<br/>
+            <input type="checkbox" name="courses" value="ES" /> ES<br/>
+            <input type="checkbox" name="courses" value="Ajax" /> Ajax<br/>
+
+            Agree <input type="checkbox" value="1" checked/> 
+            <input type="button" value="send" />
+        </fieldset>
+    </form>
+    <br />
+    <br />
+    <br />
+	</body>
+
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="studentJs.js"></script>
+    <style>
+        body{
+            font-size: larger
+        }
+        #organize tr td:first-child
+        {
+            background-color:antiquewhite;
+            color:blue;
+            font-family: 'Monotype Corsiva'
+        }
+        table:nth-child(2) td,table:nth-child(2) th
+        {
+            border:solid rgb(241, 17, 129) 1px;
+        
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+    <table id="organize">
+
+        <tr><td>name</td><td><input type="text" name="nameTxt" /><span style="color:red;visibility:hidden"> name is required</span></td></tr>
+        <tr><td>age</td><td><input type="text" name="ageTxt" /><span style="color:red;visibility:hidden"> number 25:50</span></span></td></tr>
+     
+        <tr><td>grade</td><td><input type="text" name="gradeTxt" /></td></tr>
+        <tr><td colspan="2"> <select name="deptVal">
+                <option>SD</option>
+                <option>OS</option>
+                <option>EL</option>
+  
+            </select></td></tr>
+        <tr><td colspan="2"><input type="button" value="add student" /></td></tr>
+        <tr><td>Sort</td><td>
+                <select name="studentsSort">
+                            <option selected disabled>sorting</option>
+                            <option>name</option>
+                            <option>dept</option>
+                        
+          
+                    </select>
+        </td></tr> 
+        <tr><td>Filter</td><td>
+                <select name="studentsFilter">
+                        <option>All</option>
+                        <option>Passed</option>
+                        <option>Failed</option>
+                    </select>
+        </td></tr>
+    </table>
+         
+          
+</form>
+    
+    <table id="stdTable">
+    </table>
+
+    
+
+</body>
+
+</html>

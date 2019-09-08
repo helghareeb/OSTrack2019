@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        window.addEventListener("load",function(){
+
+            divObj=document.getElementsByTagName("div")[0];
+
+            divObj.onclick=function(event){
+                console.log(event);
+                alert("inside div");
+            };//on click div
+
+            ulObj=document.getElementsByTagName("ul")[0];
+            ulObj.onclick=function(event){
+               // alert("inside ul");
+               if(event.target.tagName=="LI")
+               {
+                    alert(event.target.innerText);
+               } 
+               else
+               {
+                   alert("ul");
+               }
+               
+               event.stopPropagation();
+            };//on click ul
+
+            lielms=document.getElementsByTagName("li");
+            
+            // for(i=0;i<lielms.length;i++)
+            // {
+            //     lielms[i].onclick=function(){
+            //      alert(this.innerText);
+            // }
+
+            // }
+            
+        //create new item 
+        liObj=document.createElement("li");//<li></li>
+        liObj.innerText="new Item";//<li>new Item</li>
+        liObj.style.color="red";  //<li style='color:red'>new Item </li>
+
+        ulObj.appendChild(liObj);
+    
+    
+    
+    
+    });//load
+    </script>
+    
+    <style>
+        .bPink {
+            background-color: pink;
+        }
+
+        .bGrey {
+            background-color: lightgray;
+        }
+
+        .fontLarge {
+            font-size: large;
+        }
+
+        .fontGreen {
+            color: green;
+        }
+
+        .fontBlue {
+            color: Blue;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+                                              <!--return false-->
+    <a href="http://www.google.com" onclick="askUserAnchor()"> Google</a>
+    
+    <div style="background-color:darkseagreen" >
+        <p>Testing Div</p>
+        <ul  style="background-color:lightpink;border:5px brown solid;height:100px ">
+            <li> Elm1 </li>
+            <li> Elm2 </li>
+            <li> Elm3 </li>
+            <li> Elm4 </li>
+        </ul>
+        <p>Ending</p>
+    </div>
+
+</body>
+
+
+</html>

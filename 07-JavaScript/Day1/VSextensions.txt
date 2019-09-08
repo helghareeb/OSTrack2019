@@ -1,0 +1,8 @@
+vscode-icons
+liveserver
+auto rename tag
+debugger for chrome
+guides
+path intellisense
+rainbow brakets
+

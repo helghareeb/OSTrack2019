@@ -1,0 +1,183 @@
+<html>
+<head>
+    <script>
+        // console.log(number1)
+
+        var number1=1;
+        number2=2;
+        // console.log(number3)
+
+
+        let number3=3;
+        const number4=4;
+
+        {
+            console.log(number3)
+
+            // let number3=90;
+
+
+
+        }
+        {
+            let number3=50;
+        }
+       // console.log(number3)
+        // number4="eman";
+
+        const obj={name:"eman", salary:2000,
+        printDta:()=>{ this.name}    
+    };
+
+        // obj={};
+        const numbers=[2,4];
+        Object.freeze(obj);
+        obj.age=60;
+        Object.freeze(numbers);
+        // numbers.push(20);
+
+        window.addEventListener("load",function(){
+            let liElms=document.getElementsByTagName("li");
+            
+            document.querySelector("ul").onclick=function(){
+
+                alert(this);
+                for(let i=0;i<liElms.length;i++)
+                {
+                    liElms[i].onclick=function(){
+                        // alert(i)
+                        alert(this.innerText);
+                    }
+                }
+            }
+           
+
+            //over image
+            let i=1;
+            document.images[0].onmouseover=function(){
+            //    let img=this;
+                setInterval(()=>{
+                    this.src=`images/${++i}.jpg`;
+                },1000);
+            }
+
+        });//load
+
+
+
+        let firstName="eman";
+        let lastName='fathi' ;
+        let salary=4000;
+
+
+
+        // let fullName=firstName+" "+lastName+"  salary= "+salary;
+        let fullName=`" ' ${firstName}  ${lastName}  salary= 
+            $${(salary*200).toFixed(2)}
+        
+        `;
+            console.log(`eman
+            fathi`)
+
+        //default arguments
+
+        // function getProduct(price=9000,type)
+        // {
+        //     console.log(price,type,arguments);
+            
+        // }    
+        //arrow function
+        let getProduct=(price,type="HW")=> console.log(price,type/*,arguments*/);
+
+        // function sumAll(...numbers) //rest operstor
+        // {
+        //     console.log(numbers);
+        //     return eval(numbers.join("+"));
+        //     // let result=0;
+        //     // for(i=0;i<arguments.length;i++)
+        //     // {
+        //     //         result+=arguments[i]
+        //     // }
+        //     // // return eval(arguments.join("+"));
+        //     // return result;
+        // }
+        //=>
+        let sumAll=(...numbers)=>eval(numbers.join("+"));
+
+        let data=[3,2,6,7,8];
+
+        function operation(operator,...numbers)//rest
+        {
+            console.log(numbers);
+            // return eval(numbers.join(operator));
+
+            // let result=0;
+            // switch(operator)
+            // {
+            //     case "+":
+            //      for(i=1;i<arguments.length;i++)
+            //     {
+            //             result+=arguments[i]
+            //     }
+            //     break;
+            //     case "*":
+            //     result=1;
+            //      for(i=1;i<arguments.length;i++)
+            //     {
+            //             result*=arguments[i]
+            //     }
+            //     break;
+            // }
+            // return result;
+        }
+        operation("+",2,3,4)
+        operation("/",...data)//sperad
+
+        //spread Object
+        // student={age:20,...obj}
+
+    //   let filteredArray=data.filter(function(number){
+    //       return number>2;
+    //   });
+    let filteredArray=data.filter(number=>number>2);
+    data.sort((a,b)=> {
+        return a-b;
+    });
+
+      console.log(data);
+      console.log(filteredArray);
+
+
+      //class car
+        function inc()
+        {
+          
+                this.speed+=10;
+            
+        }
+
+      function Car()
+      {
+          this.title="Picanto";
+          this.speed=10;
+            setInterval(()=>{
+                this.speed+=10;
+            },1000)
+      }
+      let car=new Car();
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <img src="Images/1.jpg" style="width: 200px;height: 200px"/>
+</body>
+</html>

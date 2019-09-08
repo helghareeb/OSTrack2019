@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="jquery-3.2.1.js"></script>
+    <script src="news.js"></script>
+<style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size:x-large;
+            font-weight:bold;
+			background-color:lightGrey;
+        }
+        [type=text],[type=button]
+        {
+            font-family:'Century Gothic';
+            font-size:large;
+        }
+
+        table {
+            width: 400px;
+        }
+
+        .Sport {
+            background-color: lightpink;
+        }
+
+        .Social {
+            background-color: lightyellow;
+        }
+
+        .Politic {
+            background-color: lightskyblue;
+        }
+    </style>
+	<script src="jquery-3.2.1.js"></script>
+         
+    
+</head>
+<body>
+ 
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                    news Type:
+                    <input type="radio" name="news" value="Sport" checked="checked" />Sport
+                    <input type="radio" name="news" value="Social" />Social
+                    <input type="radio" name="news" value="Politic" />Politic
+                </td>
+            </tr>
+            <tr><td><input type="text" value="add here" id="newsTxt" /></td><td><input type="button" id="btn" value="Add" /></td></tr>
+            <tr colspan=2><td>Search : <input type="text" id="searchTxt" value=""/></td></tr>
+        </table>
+        </form>
+           
+                <table>
+
+
+                </table>
+            
+
+
+</body>
+</html>

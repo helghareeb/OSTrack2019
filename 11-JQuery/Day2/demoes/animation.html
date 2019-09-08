@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script src="jquery-3.2.1.js"></script>
+        <script>
+        $(function(){
+
+
+            // $(obj).animate(width)
+            //     .animate(height)
+            //     .animate(top)
+
+            //1-.animate( properties [, duration ] [, easing ] [, complete ] )
+            $("img").animate({
+                width:"400px",
+                opacity:"0.5"
+            },3000,"linear",function(){
+               // alert("Done");
+            //    $(this).animate({
+            //     width:"200px",
+            //     opacity:"1"
+            // },3000)
+            });
+            //2-.animate( properties, options )
+            $("img").animate({
+                height:"+=400px",
+                // width:"400px"
+            },{
+                duration:3000,
+                complete:function(){
+                    // alert("Done2");
+                },
+                step:function(now,obj){
+                    // if(obj.prop=='width'&& now >)    
+                    console.log(now,obj);
+                }
+            });
+
+                //stop() stop current animation stop(fasle,false)
+                //stop(true) stop all animations 
+        });//load
+        </script>
+    </head>
+    <body>
+        <button onclick="$('img').stop(true,true)">STOP</button>
+        <br/><br/>
+        <img src="images/1.jpg" style="width:200px;height:200px"/>
+    </body>
+</html>
