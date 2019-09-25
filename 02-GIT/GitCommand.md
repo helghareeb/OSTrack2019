@@ -49,3 +49,5 @@
 |`git pull`|The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. |<https://www.atlassian.com/git/tutorials/syncing/git-pull>|
 |`git push`|Update remote refs along with associated objects|<https://www.atlassian.com/git/tutorials/syncing/git-push>|
 | Sync Fork | Sync a fork of a repository to keep it up-to-date with the upstream repository. | <https://help.github.com/en/articles/syncing-a-fork> |
+| Delete Tag | `git tag -d <tag_name>` |
+| Push Local Branch Remotely | `git push -u origin <branch_name>`|
