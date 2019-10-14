@@ -51,3 +51,4 @@
 | Sync Fork | Sync a fork of a repository to keep it up-to-date with the upstream repository. | <https://help.github.com/en/articles/syncing-a-fork> |
 | Delete Tag | `git tag -d <tag_name>` |
 | Push Local Branch Remotely | `git push -u origin <branch_name>`|
+| Track Remote Branches | `git checkout --track origin/dev` |
