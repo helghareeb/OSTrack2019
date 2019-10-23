@@ -1,0 +1,9 @@
+# In the name of ALLAH
+
+x = 5
+x # This will not print x value
+print(x)
+
+# Block
+while True:
+	print('infinite loop')
