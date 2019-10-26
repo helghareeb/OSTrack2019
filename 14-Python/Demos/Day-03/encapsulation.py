@@ -3,7 +3,7 @@
 class Person:
     def __init__(self, name):
         self.name = name
-    
+
     @property
     def name(self):
         return self.__name
@@ -15,7 +15,11 @@ class Person:
         else:
             self.__name = name
 
-#a = Person(15)
-#a.__name = 29
-#print(a.get_name())
-#print(a.__name)
+b = Person('Bahy')
+print(b.name)
+
+a = Person(15)
+print(a.name)
+
+a.name = 20
+print(a.name)
