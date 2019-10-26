@@ -2,14 +2,14 @@
 
 class Person:
     def __init__(self, name):
-        self.__name = name
+        self.name = name
     
     @property
     def name(self):
-        return self.__eq__name
+        return self.__name
 
     @name.setter
-    def set_age(self, name):
+    def name(self, name):
         if type(name) != type('abc'):
             raise TypeError
         else:
@@ -19,4 +19,3 @@ class Person:
 #a.__name = 29
 #print(a.get_name())
 #print(a.__name)
-
