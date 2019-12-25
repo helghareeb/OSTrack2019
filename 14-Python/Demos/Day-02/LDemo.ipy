@@ -1,0 +1,428 @@
+# coding: utf-8
+exec('ls')
+exec(' 2 + 3')
+exec('2+3')
+exec(print('2+3'))
+exec("print('2+3')")
+exec('ls')
+import os
+os.system('ls')
+exec('os.system('ls')')
+x = input('Enter your Name: ')
+x
+type(x)
+x = input('Enter your Age: ')
+x
+type(x)
+type(int(x))
+' valid string '
+" valid string "
+' not valid "
+" not valid '
+'''
+Line 1
+Line 2
+'''
+"""
+Line 1
+Line 2
+"""
+"Ahmed's Book"
+'Ahmed"s Book'
+'Ahmed\'s Book'
+'Ahmed\tMohamed\tAbdel Fattah'
+print('Ahmed\tMohamed\tAbdel Fattah')
+print('Ahmed\nMohamed\nAbdel Fattah')
+def add_numbers(a,b):
+    '''
+    This functions adds two numbers
+    Arguments: a, b of tye int
+    '''
+    return a + b
+del(x)
+x
+x = 3
+x = 3.
+type(x)
+x = 'Ahmed'
+my_str = 'Saeed;
+my_str = 'Saeed;'
+my_str = 'Saeed'
+for ch in my_str:
+    print(ch)
+    
+type(1)
+type(1.)
+type(True)
+type(False)
+my_list = list()
+type(my_list)
+my_list = [] 
+my_tuple = ()
+my_dict = {}
+my_list = [1,2,3,4]
+my_list[0] = 20
+my_list
+mh_tuple = 1,2,3,4
+type(mh_tuple)
+mh_tuple = (1,2,3,4)
+type(mh_tuple)
+mh_tuple[0] = 20
+my_dict = {1: 'one', 2: 'two', 3:'three' }
+my_dict[1]
+my_dict[2]
+my_dict[3]
+my_dict['one'] = 1
+my_dict
+if False:
+    print('will not run')
+else:
+    print('will run')
+    
+x = False
+type(x)
+def add_numbers(a=None, b=None):
+    if not a and not b:
+        return 20
+    else:
+        return a + b
+    
+add_numbers(1,2)
+add_numbers()
+type(None)
+None == False
+type(False)
+if []:
+    print('Empty List')
+else:
+    print('Empty List evaluates to False')
+    
+True == 1
+True == 2
+if 0:
+    print('This will not run')
+elif 1:
+    print('this will run')
+else:
+    print('I will not reach here')
+    
+if 0:
+    print('This will not run')
+elif 4:
+    print('this will run')
+else:
+    print('I will not reach here')
+    
+if not 0:
+    print('this will run')
+    
+x = 'Haitham '
+3 * x
+x
+x += x
+x
+x * 4
+x = 'Python Course'
+x[0]
+x
+x[]
+x
+x[:]
+x[]
+x[1:]
+x[1:5]
+x[1:6]
+x[:6]
+x
+y = 'www.python.org'
+y[-3:]
+add_numbers()
+x.upper
+x.upper()
+x
+x.capitalize()
+y
+y = 'python course'
+y.capitalize()
+y.casefold()
+y.title()
+len([])
+len(my_list)
+my_list
+len(my_dict)
+y
+y.replace('python', 'java')
+y
+y = 'python python course'
+y.replace('python', 'java')
+y.replace('python', 'java', 2)
+y.replace('python', 'java', 1)
+y
+y.replace('python', 'java', 3)
+y = 'python ' * 5 + 'course'
+y
+y.replace('python', java, 1)
+y.replace('python', 'java', 1)
+y.replace('python', 'java', 2)
+y.replace('python', 'java')
+y 
+z = '123Python'
+z.isdigit()
+z = '123'
+z.isdigit()
+print('3')
+print('3.00')
+print(f'This is static text: {z}')
+'This is static text {}'.format(z)
+a, b, c = 1, 2, 3
+'a = {} and b = {} and c = {}'.format(a,b,c)
+'a = {0} and b = {1} and c = {2}'.format(a,b,c)
+'a = {2} and b = {1} and c = {0}'.format(a,b,c)
+'This is static text {0.2d}'.format(z)
+'This is static text {0.2}'.format(z)
+'This is static text {2d}'.format(z)
+'This is static text {2}'.format(z)
+a = complex(4,5)
+b = complex(1,2)
+a + b
+my_list = ['C', 'JS', 'Py', 'JV', 'PHP']
+my_list
+my_list[4]
+my_list
+my_list.pop(4)
+my_list
+my_list.pop()
+my_list
+my_list.append('C')
+my_list
+my_list.remove('C')
+my_list
+id('C')
+z = 'C'
+id(z)
+my_list.append('C')
+for item in my_list:
+    if item == 'C':
+        print(id(item))
+        
+my_list[2:4]
+my_list[1:3]
+my_list
+a_list = [1,2,3]
+my_list.append(a_list)
+a_list = [1,2,3]
+my_list
+for item in my_list:
+    print(type(item))
+    
+my_list.pop()
+my_list
+my_list.extend(a_list)
+my_list
+a_list = [1,2,[6,7,8]]
+my_list.extend(a_list)
+my_list
+my_dict
+my_dict.keys()
+my_dict.items()
+new_dict = {'lang1':'Py', 'lang2':'C'}
+my_dict.update(new_dict)
+my_dict
+my_list
+for item in my_list:
+    print(item)
+    
+my_dict
+my_dict[1]
+my_dict.keys()
+for k in my_dict.keys():
+    print(k)
+    
+for k in my_dict.keys():
+    print(k, my_dict[k])
+    
+for k in my_dict.keys():
+    print(f'Key {k}: Value{my_dict[k]}')
+    
+a,b = 1,2
+a
+b
+for k,v in my_dict.items():
+    print(k,v)
+    
+for k,v in my_dict.items():
+    print(f'Key {k}: Value{v}')
+    
+for item in my_list:
+    print(item)
+    
+counter = 0
+for item in my_list:
+    print(counter, item)
+    counter += 1
+    
+    
+for item in enumerate(my_list):
+    print(item)
+    
+# loop 10 times
+#range(start, stop, step)
+# start: inclusive, stop: exclusive
+range(0,10,1)
+l = range(0,10,1)
+l
+for i in range(0,10,1):
+    print(i)
+    
+for i in range(1,10,2):
+    print(i)
+    
+for i in range(0,10,2):
+    print(i)
+    
+for i in range(10):
+    print(i)
+    
+x = 0
+while x < 5:
+    print(x)
+else:
+    print('while has else')
+    
+while x < 5:
+    print(x)
+    x += 1
+else:
+    print('while has else')
+    
+while False:
+    print('this will not run')
+else:
+    print('This will run')
+    
+# Python does Not have do..while
+def temp(tmp);
+def temp(tmp):
+    pass
+a,b,c,d = 1,2,3,4
+print(a)
+print(a,b)
+print(a,b,c)
+print(a,b,c,d)
+def my_print(a,b):
+    pass
+my_print(1)
+my_print(1,2,3)
+sum(1)
+def do_sum(*args):
+    isum = 0
+    for i in args:
+        isum += i
+    return isum
+do_sum(1)
+do_sum(1,2,3,4,5)
+def add_numbers(a,b,*args):
+    isum = a + b
+    for i in args:
+        isum += i
+    return isum
+add_numbers(1)
+add_numbers(1,2)
+add_numbers(1,2,3,4,5,6)
+def wrong_add_numbers(*args, a,b):
+    isum = a + b
+    for i in args:
+        isum += i
+    return isum
+wrong_add_numbers(1)
+wrong_add_numbers(1,2)
+wrong_add_numbers(1,2,3,4,5,6)
+def kwexample(**kwargs):
+    for k,v in kwargs.items():
+        print(k,v)
+        
+my_dict
+kwexample(my_dict)
+kwexample(a=1, b=2, c=3)
+def mathex(*args, **kwargs):
+    if 'add' in kwargs:
+        isum = 0
+        for i in args:
+            isum += i
+        return isum
+    if 'mul' in kwargs:
+        imul = 1
+        for i in args:
+            imul *= i
+        return imul
+    
+        
+mathex(1,2,3,4,5,add=True)
+mathex(1,2,3,4,5,mul=True)
+name = 'Ahmed'
+def outer_fn:
+def outer_fn():
+    def inner_fn():
+        nonlocal name
+# Lexical Scope
+m
+def temp(m):
+    m += 1
+    return m
+m
+def test(n):
+    n += 1
+    m += 1
+    return m, n
+test(2)
+temp = 10
+if temp > 9 :
+    msg = 'temp larger than 9'
+else:
+    msg = 'temp less than 9'
+    
+msg
+mg = 'temp larger than 9' if temp > 9 else 'tmp less than 9'
+mg
+n = 'large' if temp > 9 else 'small'
+n
+a,b = 1,2
+a,b = b,a
+a
+b
+my_list
+my_list.pop()
+my_list
+" : ".join(my_list)
+":".join(my_list)
+my_list
+":".join(my_list[:4])
+" : ".join(my_list[:4])
+'Python ITI'.split()
+'Python:ITI:Track'.split()
+'Python:ITI:Track'.split(:)
+'Python:ITI:Track'.split(':')
+True == 1
+True is 1
+type(True)
+type(1)
+# is - is type of and is value
+a,b = [1,2]
+a
+b
+a,b = [1,2,3,4,5,6,7]
+a,b,*c = [1,2,3,4,5,6,7]
+a
+b
+c
+a,*c,b = [1,2,3,4,5,6,7]
+a
+c
+b
+%save
+%save Day-02
+%save LectureDemo
+%save 'LectureDemo'
+%save?
+%save LDemo
+%save -r LDemo 1 - 301
